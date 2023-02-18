@@ -1,22 +1,26 @@
 .screen {
     background-image: url(../images/birthday.png);
     background-size: cover;
-  
+    position: relative;
     background-position: center;
-    width: 100%;
+    width: 80%;
     min-height: 800px;
-
+    overflow: hidden;
+    margin-left: 50px;
 }
+
 .logo {
     font-family: 'Pacifico', cursive;
-    font-size: 60px;
+    font-size: 40px;
+    font-weight: bold;
     color: brown;
-    /*display: flex;
-    justify-content: flex-start;*/
+    display: flex;
+    justify-content: flex-start;
     margin-top: 60px;
     margin-left: 100px;
-
+    flex-shrink: 20px;
 }
+
 .main__info {
     font-family: 'Montserrat', sans-serif; 
     font-size: 30px;
@@ -25,15 +29,13 @@
     display: flex;
     justify-content: flex-start;
     margin-left: 100px;
-
-
 }
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-
 
 .details {
     font-family: 'Montserrat', sans-serif; 
@@ -42,10 +44,9 @@
     color: rgb(82, 33, 33);
     display: flex;
     justify-content: flex-start;
-    margin-left: 100px;
-
-     
+    margin-left: 100px;  
 }
+
 .confirmation {
     font-family: 'Montserrat', sans-serif;
     color: chocolate;
@@ -53,21 +54,22 @@
     display: flex;
     justify-content: flex-start;
     margin-left: 100px;
-    
-
 }
+
 tr td :first-child { 
     padding-left: 40px;
 }
+
 tr td {
     padding-top: 20px;
 }
+
 .container-2 {
     display: flex;
     justify-content: flex-start;
     margin-left: 100px;
-    
-}   
+} 
+
 .btn1  {
     font-family: 'Montserrat', sans-serif; 
     font-size: 30px;
@@ -78,13 +80,16 @@ tr td {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    height: 40px;
+}
 
-}
 .btn1:hover{
-    background-color: black;
-    transition: all.60s ease-out;
-    transition-delay: o6s;
+    background-color: rgb(233, 182, 182);
+    transition-timing-function: ease-out;
+    transition-delay: 0.8s;
+    width: 200px;
 }
+
 .btn2 {
     font-family: 'Montserrat', sans-serif; 
     font-size: 30px;
@@ -97,26 +102,45 @@ tr td {
     cursor: pointer;
     margin-left: 150px;
     margin-top: -35px;
+    height: 40px; 
 }
+
 .btn2:hover{
-    background-color: black;
-    transition: all.10s ease-in;
-    transition-delay: o6s;
-
-
+    background-color: rgb(228, 138, 138);
+    transition-timing-function: ease-out;
+    transition-delay: 0.8s ;
+    width: 200px; 
 }
+
 .images {
-    width: 100px;
-    height: 200px;
-    background-color: aqua;
-    animation-name: images;
-    animation-duration: 7s;
+    width: 300px;
+    height: 300px;
+    animation: baloons 16s ease infinite ;
+    margin-top: 100px;
+    position: absolute;
+    transform: translateY(100);
+    margin-left: 100px;
 }
 
-@keyframes image {
-    0%   { left:0px; top:0px;}
-    25%  { left:200px; top:0px;}
-    50%  { left:200px; top:200px;}
-    75%  { left:0px; top:200px;}
-    100% { left:0px; top:0px;}
-} 
+.images-2 {
+    width: 200px;
+    height: 200px;
+    animation: cake 8s ease infinite ;
+    margin-left: 130px;
+    position: relative;
+ }
+
+@keyframes baloons {
+     100% {
+           transform: translateY(-500%);
+           top: 100%;
+         }
+}  
+
+@keyframes cake {
+    0%   { left:-470px; top: -450px;}
+    25%  { left:650px; top:-450px;}
+    50%  { left:650px; top:120px;}
+    75%  { left:-470px; top:120px;}
+    100% { left:-470px; top:-450px;}
+  } 
